@@ -6,11 +6,21 @@ import ContactsCard from "../components/ContactsCard";
 import TimeZone from "../components/TimeZoneCard";
 import AboutMe from "../components/AboutMe";
 import Now from "../components/Now";
-import ContentPlaceholder from "../components/ContentPlaceholder";
+import WeatherCard from "../components/WeatherCard";
 import profileData from "@/data/profile.json";
+import { getWeatherForProfile } from "@/lib/weather";
 // import Globe from "../components/Globe";
 
-export default function Home() {
+export async function getServerSideProps() {
+  const weather = await getWeatherForProfile(
+    profileData,
+    process.env.OPENWEATHER_API_KEY
+  );
+
+  return { props: { weather } };
+}
+
+export default function Home({ weather }) {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
@@ -68,9 +78,7 @@ export default function Home() {
       title={profileData.site.title}
       seoProfile={profileData.seo}
     >
-      <main
-        className="text-white m-auto p-2 grid gap-2 max-w-6xl relative w-full sm:p-4 sm:gap-2 md:grid-cols-[1fr_1fr_0.9fr] md:gap-3 md:p-6 lg:grid-cols-4 lg:gap-4"
-      >
+      <main className="text-white m-auto p-2 grid gap-2 max-w-6xl relative w-full sm:p-4 sm:gap-2 md:grid-cols-[1fr_1fr_0.9fr] md:gap-3 md:p-6 lg:grid-cols-4 lg:gap-4">
         <IntroCard intro={profileData.intro} />
         <AboutMe about={profileData.about} />
         <ContactsCard contacts={profileData.contacts} />
@@ -91,22 +99,12 @@ export default function Home() {
             </p>
           </div>
         </Card>
-        <ContentPlaceholder
-          title={profileData.sections.comingSoon.title}
-          message={profileData.sections.comingSoon.message}
-          cta={profileData.sections.comingSoon.cta}
-        />
+        <WeatherCard weather={weather} />
         <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
           <div className="relative min-h-[44px] overflow-hidden">
             <footer className="absolute inset-0 text-xs opacity-100 translate-y-0 transition-all duration-300 ease-out group-hover:-translate-y-3 group-hover:opacity-0 group-focus-within:-translate-y-3 group-focus-within:opacity-0">
               © {profileData.site.footer.year} · {profileData.site.footer.prefix}{" "}
-              <a
-                className="text-red-500"
-                href={profileData.site.footer.frameworkUrl}
-                target="_blank"
-              >
-                {profileData.site.footer.frameworkName}
-              </a>{" "}
+              <a className="text-red-500" href={profileData.site.footer.frameworkUrl} target="_blank">{profileData.site.footer.frameworkName}</a>{" "}
               by {profileData.site.footer.author}.
             </footer>
             <footer
