@@ -1,50 +1,44 @@
 {
   "site": {
-    "title": "Gianmarco Cavallo - Freelance front-end Developer",
-    "description": "I'm a developer based in Italy, passionate about user experience and specializing in engaging animations and micro-interactions. My primary tools of choice include: JavaScript, React, Solid.js, Astro, Svelte, and Node.js.",
+    "title": "Rizalde Martinez Jr. - Digital Media and IT Student",
+    "description": "I'm a student at NAIT in the Digital Media and IT program, passionate about UX/UI design and front-end development. I enjoy creating visually appealing and user-friendly digital experiences. I'm eager to learn and grow in the field of digital media and IT, and I'm excited to share my journey and projects with you.",
     "footer": {
       "year": "2026",
       "prefix": "Built on",
       "frameworkName": "React",
       "frameworkUrl": "https://react.dev/",
-      "author": "AI under the guidance of DanG-IT Professional"
+      "author": "Rizalde Martinez Jr."
     }
   },
   "seo": {
-    "personName": "Gianmarco",
-    "jobTitle": "Freelance Frontend Developer",
-    "worksFor": "Self-Employed",
-    "location": "Italy",
-    "countryCode": "IT",
-    "nationality": "Italy",
-    "publisherName": "Gianmarco",
+    "personName": "Rizalde",
+    "jobTitle": "Digital Media and IT Student",
+    "worksFor": "NAIT",
+    "location": "Edmonton",
+    "countryCode": "CA",
+    "nationality": "Canada",
+    "publisherName": "Rizalde Martinez Jr.",
     "sameAs": [
-      "https://www.linkedin.com/in/gianmarco-cavallo/",
-      "https://github.com/Ladvace"
+      "https://www.linkedin.com/in/rizaldejr/",
+      "https://github.com/rizaldejr"
     ]
   },
   "intro": {
     "welcomeLabel": "welcome",
-    "name": "Gianmarco Cavallo",
-    "summary": "a software developer with strong focus on the user experience, animations and micro interactions",
+    "name": "Rizalde Martinez Jr.",
+    "summary": "a Digital Media and IT student at NAIT with a passion for UX/UI design and front-end development",
     "socialButtons": [
       {
         "ariaLabel": "github profile",
         "screenReaderLabel": "GitHub Profile",
         "icon": "ri:github-fill",
-        "url": "https://github.com/Ladvace"
+        "url": "https://github.com/rizaldejr"
       },
       {
         "ariaLabel": "linkedin profile",
         "screenReaderLabel": "Linkedin Profile",
         "icon": "ri:linkedin-box-fill",
-        "url": "https://www.linkedin.com/in/gianmarco-cavallo/"
-      },
-      {
-        "ariaLabel": "dribble profile",
-        "screenReaderLabel": "Dribble Profile",
-        "icon": "ri:dribbble-fill",
-        "url": "https://dribbble.com/Ladvace_Jace"
+        "url": "https://www.linkedin.com/in/rizaldejr/"
       }
     ],
     "supportLink": {
@@ -54,7 +48,7 @@
     },
     "image": {
       "src": "/me.webp",
-      "alt": "memoji of gianmarco"
+      "alt": "memoji of Rizalde"
     }
   },
   "about": {
