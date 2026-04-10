@@ -1,6 +1,6 @@
 # Theory 2
 
-> Student Name: **RIZALDE_MARTINEZ**
+> Student Name: **Rizalde Martinez Jr. | rizaldejr**
 
 ![Website Screenshot](./docs/images/screenshot.png)
 
